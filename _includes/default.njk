@@ -18,6 +18,31 @@
     <script defer src="/js/alpine.js?v={% version %}"></script>
   </head>
   <body class="">
+    <div class="text-2xl">
+      <nav class="bg-white py-3 p-5 flex align-baseline relative w-[100%]">
+        <h1 class="font-bold font-sans mr-auto self-center">Selfhost</h1>
+        <ul class="invisible hidden md:visible md:inline-flex">
+          <li>
+            <button onclick="window.location.href='posts/';" class="btn text-xl font-sans bg-slate-900">Posts</button>
+          </li>
+        </ul>
+          <div x-data="{ open: false }" >
+            <button @click="open = !open" class="md:invisible md:hidden visible block">
+              <svg viewBox="0 0 100 80" width="34" height="34">
+                <rect width="100" height="20" rx="8"></rect>
+                <rect y="30" width="100" height="20" rx="8"></rect>
+                <rect y="60" width="100" height="20" rx="8"></rect>
+              </svg>
+            </button>
+          <div x-show="open" @click.outside="open = false" x-transition:enter.scale.80 x-transition.scale.origin.bottom x-transition.duration.300ms class="block fixed right-3 top-[4.3rem] bg-black p-4 rounded-md text-white">
+            <ul class="space-y-2">
+              <li><a href="about/">About</a></li>
+              <li><a href="posts/">Posts</a></li>
+            </ul>
+          </div>
+        </div>  
+      </nav>
+    </div>
     {% block content %}
       {{ content | safe }}
     {% endblock %}
