@@ -7,3 +7,6 @@
     color: black;
   }
 }
+.btn {
+  text-transform: none;
+}

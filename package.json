@@ -5,7 +5,10 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "@tailwindcss/typography": "^0.5.2",
     "alpinejs": "^3.7.0",
+    "daisyui": "^2.0.9",
+    "eleventy-google-fonts": "^0.1.0",
     "html-minifier": "^4.0.0",
     "tailwindcss": "^3.0.0"
   }
