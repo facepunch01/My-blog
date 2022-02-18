@@ -17,3 +17,6 @@ hr {
   margin-right: 15%;
   border-radius: 3rem;
 }
+.btn-info {
+  color: rgb(36, 99, 235);
+}
