@@ -14,13 +14,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
     {% block head %}{% endblock %}
     <script defer src="/js/alpine.js?v={% version %}"></script>
   </head>
   <body class="text-black">
     <div class="text-2xl">
       <nav class="bg-white py-3 p-5 flex align-baseline relative w-[100%]">
-        <h1 class="font-bold font-sans mr-auto self-center relative top-[0.15rem] md:top-[0.1rem]">Selfhost</h1>
+        <h1 class="font-bold font-sans mr-auto self-center relative top-[0.15rem] md:top-[0.1rem]"><a href="/">Selfhost</a></h1>
         <ul class="invisible hidden md:visible md:inline-flex">
           <li class="mr-[1.5rem] relative top-2"><a href="about/" class="">About</a></li>
           <li>

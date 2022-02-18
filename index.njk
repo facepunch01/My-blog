@@ -1,3 +1,12 @@
+---
+title: Home
+pagination:
+  data: collections.post
+  size: 6
+  reverse: true
+  alias: posts
+---
+
 {% extends "_includes/default.njk" %}
 
 {% block title %}Selfhost{% endblock %}
@@ -5,8 +14,29 @@
 {% block content %}
   <section>
     <div class="text-center shadow-3xl p-16 bg-white m-9 rounded-2xl">
-      <h1 class="content-center row-start-1 row-end-2 text-center text-6xl font-bold text-zinc-900">Jake Hackl</h1>
+      <h1 class="content-center row-start-1 row-end-2 text-center text-6xl font-bold text-zinc-900">Blog</h1>
     </div>
   </section>
   <hr>
+  <section class="">
+    <div class="container md:px-8 mx-auto lg:px-4 mt-8 md:mt-6 mb-12">
+      <div class="grid md:grid-flow-row justify-center text-left grid-cols-1 md:grid-cols-3 md:gap-x-11 gap-y-14">
+         {% for post in posts %}
+          {{ post.data.page | log }}
+          <div class="card text-center shadow-lg bg-white justify-items-center max-w-md mx-[20%] md:m-0">
+              <figure class="px-10 pt-10 -mb-4">
+                  <img class="rounded-xl border-2 border-gray-200 min-h-[10rem] object-contain" src={{ post.url}}{{post.data.featuredImage}} alt="content">
+              </figure>
+              <div class="card-body">
+                  <h2 class="card-title justify-center text-center">{{ post.data.title }}</h2>
+                  <p class="">{{post.data.page.excerpt | truncate(80) }}</p>
+                  <div class="justify-center card-action mt-6">
+                      <button class="btn btn-outline btn-info" onclick="window.location.href='{{ post.url | url }}';">Read more</button>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+  </section>
 {% endblock %}
