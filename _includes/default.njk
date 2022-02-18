@@ -20,7 +20,7 @@
   <body class="">
     <div class="text-2xl">
       <nav class="bg-white py-3 p-5 flex align-baseline relative w-[100%]">
-        <h1 class="font-bold font-sans mr-auto self-center">Selfhost</h1>
+        <h1 class="font-bold font-sans mr-auto self-center relative top-[0.15rem] md:top-[0.1rem]">Selfhost</h1>
         <ul class="invisible hidden md:visible md:inline-flex">
           <li>
             <button onclick="window.location.href='posts/';" class="btn text-xl font-sans bg-slate-900">Posts</button>
@@ -47,4 +47,6 @@
       {{ content | safe }}
     {% endblock %}
   </body>
+  <script src="js/anime.min.js"></script>
+  <script src="js/myjs.js"></script>
 </html>
